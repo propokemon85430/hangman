@@ -1,4 +1,4 @@
-package github.com/propokemon85430/hangman
+package pendu
 
 import (
 	"math/rand/v2"
