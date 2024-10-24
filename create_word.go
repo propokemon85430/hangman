@@ -1,4 +1,4 @@
-package pendu
+package github.com/propokemon85430/hangman
 
 import (
 	"fmt"
