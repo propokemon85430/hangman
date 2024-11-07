@@ -33,5 +33,5 @@ func CreateWord(filePath string) string {
 		}
 	}
 	fmt.Println(beginning_word)
-	return beginning_word
+	return beginning_word, new_word
 }
