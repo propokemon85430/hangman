@@ -6,8 +6,8 @@ import (
 	"sort"
 )
 
-func CreateWord() string {
-	new_word := Random_Word()
+func CreateWord(filePath string) string {
+	new_word := Random_Word(filePath)
 	index := 0
 	hidden_word := ""
 	beginning_word := ""
