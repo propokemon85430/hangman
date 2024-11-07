@@ -6,10 +6,7 @@ import (
 	"strings"
 )
 
-func Random_Word() string {
-	tab := [3]string{"words.txt", "words2.txt", "words3.txt"}
-	index := rand.IntN(len(tab))
-	filePath := "../" + tab[index]
+func Random_Word(filePath string) string {
 	content, error := os.ReadFile(filePath)
 	if error != nil {
 		return "File name missing"
