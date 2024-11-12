@@ -6,9 +6,7 @@ import (
 )
 
 func ValidLetter(finalWord, hiddenWord, letter string) (string, int) {
-    if rune(letter)>='A' || rune(letter) <='Z' {
-        letter=strings.ToLower(letter) }
-    if strings.Contains(finalWord, letter) {
+    if strings.Contains(finalWord, ToLower(letter)) {
         fmt.Println("La lettre choisie est dans le mot")
 
         hiddenWordArr := []rune(hiddenWord)
