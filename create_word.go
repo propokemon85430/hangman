@@ -13,7 +13,7 @@ func CreateWord(filePath string) (string, string) {
 	beginning_word := ""
 	var random_index []int
 	for i := 0; i < len(new_word); i++ {
-		hidden_word = hidden_word + "."
+		hidden_word = hidden_word + "_"
 	}
 	for l := 0; l < len(new_word)/2-1; l++ {
 		random_index = append(random_index, rand.IntN(len(new_word)))
@@ -26,7 +26,7 @@ func CreateWord(filePath string) (string, string) {
 			beginning_word = beginning_word + string(new_word[j])
 			index = index + 1
 		} else {
-			beginning_word = beginning_word + "."
+			beginning_word = beginning_word + "_"
 		}
 		if index == len(random_index) {
 			index = 0
