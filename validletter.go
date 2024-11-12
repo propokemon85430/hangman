@@ -7,7 +7,7 @@ import (
 
 func ValidLetter(finalWord, hiddenWord, letter string) (string, int) {
     if letter=>'A' || letter <='Z' {
-        letter=strings.toLower(letter)
+        letter=strings.toLower(letter) }
     if strings.Contains(finalWord, letter) {
         fmt.Println("La lettre choisie est dans le mot")
 
