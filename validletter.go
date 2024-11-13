@@ -14,8 +14,8 @@ func ValidLetter(finalWord, hiddenWord, letter string) (string, int) {
         finalRunes := []rune(finalWord)
 
         for i := 0; i < len(finalRunes); i++ {
-            if finalRunes[i] == rune(letter) && hiddenRunes[i] == '_' {
-                hiddenRunes[i] = rune(letter)
+            if finalRunes[i] == rune(letter[0]) && hiddenRunes[i] == '_' {
+                hiddenRunes[i] = rune(letter[0])
             }
         }
 
@@ -24,5 +24,5 @@ func ValidLetter(finalWord, hiddenWord, letter string) (string, int) {
     }
 
     fmt.Println("La lettre n'est pas présente dans le mot")
-    return string(hiddenRunes), 1
+    return hiddenword, 1
 }
