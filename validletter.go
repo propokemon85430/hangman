@@ -1,13 +1,9 @@
-package pendu
-
-import (
-    "fmt"
-    "strings"
-)
-
 func ValidLetter(finalWord, hiddenWord, letter string) (string, int) {
-    if len(hiddenWord)>len(finalWord) {
-        hiddenWord=hiddenWord[:len(hiddenWord)-1] }
+    // Assurer que hiddenWord a la même longueur que finalWord
+    if len(hiddenWord) > len(finalWord) {
+        hiddenWord = hiddenWord[:len(finalWord)]
+    }
+    
     if strings.Contains(finalWord, letter) {
         fmt.Println("La lettre choisie est dans le mot")
 
