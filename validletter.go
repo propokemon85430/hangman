@@ -6,11 +6,6 @@ import (
 )
 
 func ValidLetter(finalWord, hiddenWord, letter string) (string, int) {
-    // Assurer que hiddenWord a la même longueur que finalWord
-    if len(hiddenWord) > len(finalWord) {
-        hiddenWord = hiddenWord[:len(finalWord)] // Tronquer hiddenWord si nécessaire
-    }
-
     // Afficher les longueurs pour déboguer
     fmt.Println("Longueur de hiddenWord : ", len(hiddenWord))
     fmt.Println("Longueur de finalWord : ", len(finalWord))
@@ -35,10 +30,13 @@ func ValidLetter(finalWord, hiddenWord, letter string) (string, int) {
 
         // Afficher la version mise à jour de hiddenWord pour le débogage
         fmt.Println("hiddenWord mis à jour : ", updatedHiddenWord)
-
+        if len(updatedHiddenWord)>len(finalWord) {
+            updatedHiddenWord = updatedHiddenWord[:len(updatedHiddenWord)-1] }
         return updatedHiddenWord, 0
     }
 
     fmt.Println("La lettre n'est pas présente dans le mot")
+    if len(hiddenWord)>len(finalWord) {
+            hiddenWord = hiddenWord[:len(hiddenWord)-1] }
     return hiddenWord, 1
 }
