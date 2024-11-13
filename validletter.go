@@ -24,5 +24,5 @@ func ValidLetter(finalWord, hiddenWord, letter string) (string, int) {
     }
 
     fmt.Println("La lettre n'est pas présente dans le mot")
-    return hiddenword, 1
+    return hiddenWord, 1
 }
