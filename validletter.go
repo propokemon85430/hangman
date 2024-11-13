@@ -3,6 +3,8 @@ func ValidLetter(finalWord, hiddenWord, letter string) (string, int) {
     if len(hiddenWord) > len(finalWord) {
         hiddenWord = hiddenWord[:len(finalWord)]
     }
+    fmt.Println(len(hiddenWord))
+    fmt.Println(len(finalWord))
     
     if strings.Contains(finalWord, letter) {
         fmt.Println("La lettre choisie est dans le mot")
