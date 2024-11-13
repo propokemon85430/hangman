@@ -13,6 +13,6 @@ func Random_Word(filePath string) string {
 	}
 	lines := strings.Split(string(content), "\n")
 	random_word := rand.IntN(22)
-	new_word := (string(lines[random_word]) + "\n")
+	new_word := strings.TrimSpace(lines[random_word])
 	return new_word
 }
